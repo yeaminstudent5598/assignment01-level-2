@@ -1,3 +1,6 @@
+
+//String Formatter Function
+
 function formatString(input: string, toUpper?: boolean): string {
   if (toUpper === true || toUpper === undefined) {
       return input.toUpperCase();
@@ -7,7 +10,7 @@ function formatString(input: string, toUpper?: boolean): string {
 }
 
 
-
+//Filter Items by Rating (>= 4)
 
 function filterByRating(items: { title: string; rating: number }[]): { title: string; rating: number }[] {
   const res = items.filter(item => item.rating >= 4);
@@ -16,7 +19,7 @@ function filterByRating(items: { title: string; rating: number }[]): { title: st
 
 
 
-
+//Concatenate Multiple Arrays
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
   return arrays.reduce((acc, curr) => acc.concat(curr), []);
@@ -25,7 +28,7 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
 
 
 
-
+//Vehicle and Car Classes with Inheritance
 
 class Vehicle {
   private make: string;
@@ -52,7 +55,7 @@ class Car extends Vehicle {
 
 
 
-
+//Process Value: String Length or Number × 2
 
 function processValue(value: string | number): number {
   if (typeof value === "string") {
@@ -64,7 +67,7 @@ function processValue(value: string | number): number {
 }
 
 
-
+//Find Most Expensive Product
 
 interface Product {
   name: string;
@@ -90,7 +93,7 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
 
 
 
-
+//Day Enum and Type Checker
 
 enum Day {
   Monday,
@@ -111,7 +114,7 @@ function getDayType(day: Day): string {
 
 
 
-
+//Square a Number Asynchronously
 
 async function squareAsync(n: number): Promise<number> {
   return new Promise((resolve, reject) => {
